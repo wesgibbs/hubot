@@ -9,8 +9,7 @@
 #   None
 #
 # Commands:
-#   i|you fear - Recite the litany
-#   i|you am|are afraid - recite the litany
+#   fear|afraid - Recite the Litany Against Fear
 #
 # Authors:
 #   wgibbs
@@ -25,5 +24,5 @@ Where the fear has gone there will be nothing.\n
 Only I will remain."
 
 module.exports = (robot) ->
-  robot.hear /(i('m| am)?|you(|'re| are)) (\w* )?(afraid|fear)/i, (msg) ->
+  robot.hear /(afraid|fear)/i, (msg) ->
     msg.send litany
